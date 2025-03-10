@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bit Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Bit Calculator</h1>
+    <p>Choose your input mode.</p>
+    <form id="calcForm">
+      <div class="form-group">
+        <label>Input Mode:</label>
+        <label><input type="radio" name="mode" value="decimal" checked> Decimal</label>
+        <label><input type="radio" name="mode" value="binary"> Binary</label>
+      </div>
+      <div class="form-group">
+        <label for="valueA">Value A:</label>
+        <input type="text" id="valueA" required>
+      </div>
+      <div class="form-group">
+        <label for="valueB">Value B:</label>
+        <input type="text" id="valueB" required>
+      </div>
+      <div class="form-group">
+        <label for="operation">Operation:</label>
+        <select id="operation">
+          <option value="add">Addition (+)</option>
+          <option value="subtract">Subtraction (-)</option>
+          <option value="multiply">Multiplication (×)</option>
+          <option value="divide">Division (÷) - integer division</option>
+        </select>
+      </div>
+      <button type="submit">Calcuate</button>
+    </form>
+    <div id="result">
+      <h2>Result</h2>
+      <p id="resultDecimal"></p>
+      <p id="resultBinary"></p>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
